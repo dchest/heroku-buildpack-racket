@@ -1,5 +1,7 @@
 #! /bin/sh
 
+RACKET_VERSION_TAG=v6.1
+
 BUILD_DIR=$1
 CACHE_DIR=$2
 
@@ -21,6 +23,7 @@ get_racket() {
   cd $dir
   git clone $RACKET_REPO 1>&2
   cd racket
+  git checkout $RACKET_VERSION_TAG
   echo `pwd`
 }
 
@@ -47,7 +50,7 @@ if [ ! -d $RACKET_DIR ] then
   exit 1
 fi
 
-echo "-----> Creating racketapp From heroku-setup.mkt"
+echo "-----> Creating racketapp From app.rkt"
 cd $RACKET_DIR
 cd bin
-raco exe -o $BUILD_DIR/racketapp $BUILD_DIR/heroku-setup.mkt
+raco exe -o $BUILD_DIR/racketapp $BUILD_DIR/app.rkt
