@@ -50,7 +50,7 @@ RACKET_DIR=$(build_racket $(get_racket $(make_tempdir racket)))
 #  exit 1
 #fi
 
-echo "-----> Creating racketapp From app.rkt"
-cd $RACKET_DIR
-cd bin
-raco exe -o $BUILD_DIR/racketapp $BUILD_DIR/app.rkt
+#echo "-----> Creating racketapp From app.rkt"
+#cd $RACKET_DIR
+#cd bin
+#raco exe -o $BUILD_DIR/racketapp $BUILD_DIR/app.rkt
