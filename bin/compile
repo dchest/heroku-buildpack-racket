@@ -22,7 +22,7 @@ get_racket() {
   dir=$1
   cd $dir
   git clone $RACKET_REPO 1>&2
-  cd racket
+  cd racket/racket
   #git checkout $RACKET_VERSION_TAG 1>&2
   echo `pwd`
 }
