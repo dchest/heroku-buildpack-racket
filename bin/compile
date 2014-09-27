@@ -53,7 +53,7 @@ RACKET_DIR=$(build_racket $(get_racket $(make_tempdir racket)))
 echo "-----> Installing Racket Distribution"
 cd $RACKET_DIR
 cd bin
-raco pkg install main-distribution
+yes | raco pkg install main-distribution --force
 
 #echo "-----> Creating racketapp From app.rkt"
 #cd $RACKET_DIR
