@@ -21,9 +21,10 @@ make_tempdir()
 get_racket() {
   dir=$1
   cd $dir
-  git clone $RACKET_REPO 1>&2
+  #git clone $RACKET_REPO 1>&2
+  git clone $RACKET_REPO
   cd racket
-  git checkout $RACKET_VERSION_TAG
+  #git checkout $RACKET_VERSION_TAG
   echo `pwd`
 }
 
